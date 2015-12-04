@@ -1,5 +1,6 @@
 .*
 !.gitignore
+!.bowerrc
 /public/components
 /node_modules
 npm-debug.log
