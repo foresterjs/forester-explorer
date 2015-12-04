@@ -8,10 +8,11 @@ exports.serveSchema = serveSchema;
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } step("next"); }); }; }
 
 const router = require('koa-simple-router');
+const path = require('path');
 
 module.exports = function (forester) {
 
-  forester.registerStaticRoute({ route: '/explorer', path: __dirname + '/public' });
+  forester.registerStaticRoute({ route: '/explorer', path: path.join(__dirname, '../public') });
 
   forester.koa.use(router(function (_) {
     _.get('/schema', serveSchema({ collections: forester.collections, rest: forester.rest }));
