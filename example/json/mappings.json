@@ -1,0 +1,10 @@
+[
+  {
+    "collection": "authors",
+    "datasource": "db1"
+  },
+  {
+    "collection": "articles",
+    "datasource": "db1"
+  }
+]
