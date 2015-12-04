@@ -3,7 +3,7 @@
 var Forester = require('forester');
 var app = new Forester();
 
-app.use(require('../'));
+app.use(require('../lib'));
 
 app.registerConfig(require('./json/config.json'));
 app.registerCollection(require('./json/collections/authors.json'));
