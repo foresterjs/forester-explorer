@@ -1,11 +1,12 @@
 "use strict";
 
 var Forester = require('forester');
+var explorer = require('../lib/index');
+
 var app = new Forester();
 
-app.use(require('../lib'));
+app.use(explorer());
 
-app.registerConfig(require('./json/config.json'));
 app.registerCollection(require('./json/collections/authors.json'));
 app.registerCollection(require('./json/collections/articles.json'));
 
