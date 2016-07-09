@@ -1,6 +1,6 @@
 {
   "name": "forester-explorer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Explorer for Forester",
   "main": "build/index.js",
   "scripts": {
