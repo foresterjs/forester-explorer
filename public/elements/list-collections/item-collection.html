@@ -7,9 +7,13 @@
       :host {
         display: block;
       }
+      a{
+        font-weight: normal;
+        color: #fff;
+      }
     </style>
 
-    <a is="app-link" href="#!/{{collection.name}}">{{collection.name}}</a>
+    <a is="app-link" href="#!/{{collection.name}}">- {{collection.name}}</a>
 
   </template>
 </dom-module>

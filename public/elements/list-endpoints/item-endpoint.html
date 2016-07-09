@@ -10,13 +10,17 @@
       .endpoint {
         display: block;
         margin-bottom: 1.5em;
-        background-color: #eee;
+        border-bottom: 1px solid #6f9aa6;
         padding: .5em 1em;
       }
 
       .endpoint .description,
       .endpoint .url {
         margin: .4em 0em;
+      }
+
+      .endpoint .name{
+        display: block;
       }
 
       .endpoint .url{
@@ -30,9 +34,11 @@
     </style>
 
     <a class="endpoint" href="#!/{{collection.name}}/{{endpoint.name}}">
-      <strong>{{endpoint.name}}</strong>
-      <p class="description">{{endpoint.description}}</p>
+      <strong class="name">Endpoint {{endpoint.name}}</strong>
       <pre class="method">{{endpoint.method}}</pre> <pre class="url">{{endpoint.url}}</pre>
+
+      <p class="description">{{endpoint.description}}</p>
+
     </a>
 
   </template>

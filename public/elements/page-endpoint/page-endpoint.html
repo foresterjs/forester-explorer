@@ -7,11 +7,15 @@
       :host {
         display: block;
       }
+      a{
+        text-decoration: none;
+      }
     </style>
 
     <layout-page data="{{data}}">
-      <h1>collection {{data.collection.name}}</h1>
-      <a href="#!/{{data.collection.name}}">&larr; back</a>
+      <h1>Collection {{data.collection.name}} &gt; Endpoint {{data.endpoint.name}}</h1>
+
+      <a href="#!/{{data.collection.name}}">&larr; back to endpoint list</a>
       <panel-endpoint endpoint="{{data.endpoint}}"></panel-endpoint>
     </layout-page>
 
